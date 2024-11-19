@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I love you varisha</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-image: url('https://4kwallpapers.com/images/walls/thumbs_3t/9983.jpg');
+            background-size: 100% 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100vw;
+            font-family: Arial, sans-serif;
+        }
+
+        .husband-message {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 50px;
+            font-weight: bold;
+            color: #ff007f;
+            -webkit-text-stroke: 2px black;
+            text-stroke: 2px black;
+            z-index: 3;
+        }
+
+        .message, .message-2, .kiss {
+            position: absolute;
+            font-size: 40px;
+            font-weight: bold;
+            color: #FF1493;
+            text-shadow: 3px 3px 6px black;
+            opacity: 0;
+            animation: appearAndDisappear 1.5s forwards;
+            z-index: 2;
+        }
+
+         .message {
+             color: #FF1493; /* Setting the text color to black for the outline effect */
+             font-size: 40px; /* Font size for the message */
+             font-weight: bold;
+             text-align: center;
+             text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .message-2 {
+            font-size: 20px;
+            color: black;
+            text-shadow: 3px 3px 6px rgba(255, 105, 180, 1);
+            z-index: 1;
+        }
+
+        .kiss {
+            color: red;
+            font-size: 25px;
+            text-shadow: 2px 2px 4px rgba(255, 20, 20, 0.8);
+        }
+
+        @keyframes appearAndDisappear {
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+        }
+
+        .question-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-image: url('https://i.pinimg.com/originals/7d/68/a4/7d68a425553c15f0edbddbc163d9c462.jpg');
+            background-size: cover;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            color: black;
+            font-weight: bold;
+            font-size: 36px;
+            z-index: 10;
+            display: none; /* Initially hidden */
+        }
+
+        .answer-button {
+            margin: 10px;
+            padding: 20px 50px;  /* Reduced size of the button */
+            font-size: 30px;      /* Reduced font size of the button */
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #ff007f;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .feedback {
+            margin-top: 20px;
+            font-size: 36px;
+            font-weight: bold;
+            color: inherit;
+            text-shadow: none;
+        }
+
+        .wrong { color: red; }
+        .correct { color: green; }
+
+        }
+
+        /* Style for the audio emoji button */
+        #audio-button {
+            font-size: 50px;
+            cursor: pointer;
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Place at the bottom */
+            left: 20px; /* Place on the left */
+            z-index: 20; /* Make sure it's above the bubbles */
+        }
+
+        /* Ensuring the button stays in front of the bubbles */
+        .message, .message-2, .kiss {
+            z-index: 1; /* These should remain behind the audio button */
+        }
+    </style>
+</head>
+<body>
+    <!-- Audio Button as Emoji -->
+    <div id="audio-button" onclick="toggleAudio()">🔊</div>
+
+    <!-- Audio File that will play or pause on button click -->
+    <audio id="audio" preload="auto">
+        <source src="https://github.com/Ashazzzzli/sgsdfg/raw/refs/heads/main/Hello%20This%20Is%20Kitty%20-%20Tiktok%20song.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Husband's Message -->
+    <div class="husband-message">from ashaz >~<</div>
+
+        }
+
+        function createBubble() {
+            const message = document.createElement('div');
+            message.classList.add('message');
+            message.textContent = 'happy birthday baby';
+            message.style.left = `${Math.random() * (window.innerWidth - 100)}px`;
+            message.style.top = `${Math.random() * (window.innerHeight - 50)}px`;
+            document.body.appendChild(message);
+            setTimeout(() => message.remove(), 2000);
+        }
+
+        function createBubble2() {
+            const message = document.createElement('div');
+            message.classList.add('message-2');
+            message.textContent = 'I love you varisha';
+            message.style.left = `${Math.random() * (window.innerWidth - 100)}px`;
+            message.style.top = `${Math.random() * (window.innerHeight - 50)}px`;
+            document.body.appendChild(message);
+            setTimeout(() => message.remove(), 2000);
+        }
+
+        function createKissBubble() {
+            for (let i = 0; i < 45; i++) {
+                const kiss = document.createElement('div');
+                kiss.classList.add('kiss');
+                kiss.textContent = 'censored for styrmir!';
+                kiss.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
+                kiss.style.top = `${Math.random() * (window.innerHeight - 50)}px`;
+                document.body.appendChild(kiss);
+                setTimeout(() => kiss.remove(), 1500);
+            }
+        }
+
+        setInterval(createBubble, 100);
+        setInterval(createBubble2, 100);
+        setInterval(createKissBubble, 2000);
+    </script>
+</body>
+</html>
